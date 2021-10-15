@@ -1,0 +1,6 @@
+
+/  ==> this is working
+/ SignIn ==> POST = success/fail
+/ register ==> POST = user
+/ profile/userid ==> GET = user
+/ image ==> PUT = user
