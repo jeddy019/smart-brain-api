@@ -1,16 +1,14 @@
 {
   "name": "smart-brain-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "My first server",
   "main": "server.js",
+  "engines": {
+   "node": "14.17.6"
+   },
   "scripts": {
-"dev": "react-scripts start",
-"start": "serve -s build",
-"build": "react-scripts build",
-"test": "react-scripts test --env=jsdom",
-"eject": "react-scripts eject",
-"heroku-postbuild": "npm run build"
-},
+    "start": "nodemon server.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
