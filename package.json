@@ -4,8 +4,8 @@
   "description": "My first server",
   "main": "server.js",
   "engines": {
-   "node": "14.17.6"
-   },
+    "node": "14.17.6"
+  },
   "scripts": {
     "start": "node server.js"
   },
