@@ -1,20 +1,18 @@
 const express = require('express');
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
-const knex = require('knex');
-
-const register = require('./controller/register.js');
-const signin = require('./controller/signin.js');
-const profile = require('./controller/profile.js');
-const image = require('./controller/image.js');
-
-const db = knex({
+const db = require('knex')({
   client: 'pg',
   connection: {
     connectionString: process.env.DATABASE_URL,
     ssl: true,
   }
 });
+
+const register = require('./controller/register');
+const signin = require('./controller/signin');
+const profile = require('./controller/profile');
+const image = require('./controller/image');
 
 const app = express();
 const PORT = process.env.PORT ? process.env.PORT : 3000;
