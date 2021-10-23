@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
-const knex = require('knex')({
+const knex = require('knex');
 
 const register = require('./controller/register');
 const signin = require('./controller/signin');
@@ -15,7 +15,6 @@ const db = knex({
     ssl: true,
   }
 });
-
 
 const app = express();
 const PORT = process.env.PORT ? process.env.PORT : 3000;
