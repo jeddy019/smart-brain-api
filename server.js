@@ -2,13 +2,13 @@ const express = require('express');
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const db = require('knex')({
+ const db = require('knex')({
   client: 'pg',
   connection: {
-connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
+    connectionString: process.env.DATABASE_URL,
+    ssl: true,
   }
-});
+  });
 
 const register = require('./controller/register');
 const signin = require('./controller/signin');
